@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_data_policy2">
+    <sys_data_policy2 action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <apply_import_set>true</apply_import_set>
+        <apply_soap>true</apply_soap>
+        <conditions/>
+        <description>set mandatory for currency and rate on Exchange rate table - Currency application</description>
+        <enforce_ui>true</enforce_ui>
+        <inherit>false</inherit>
+        <model_id/>
+        <model_table>x_847732_currency_exchange_rate</model_table>
+        <reverse_if_false>true</reverse_if_false>
+        <short_description>fpt_exchangeRateMandatory</short_description>
+        <sys_class_name>sys_data_policy2</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2022-07-22 01:40:44</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>480c6c1e0778111068edf16c7c1ed076</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>fpt_exchangeRateMandatory</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="Currency" source="x_847732_currency">494a0e020730111068edf16c7c1ed0f8</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Currency">494a0e020730111068edf16c7c1ed0f8</sys_scope>
+        <sys_update_name>sys_data_policy2_480c6c1e0778111068edf16c7c1ed076</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2022-07-22 01:40:44</sys_updated_on>
+    </sys_data_policy2>
+</record_update>
