@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_script_include">
+    <sys_script_include action="INSERT_OR_UPDATE">
+        <access>package_private</access>
+        <active>true</active>
+        <api_name>x_847732_currency.fpt_currenciesUtils</api_name>
+        <caller_access/>
+        <client_callable>true</client_callable>
+        <description>Create some utils for currency form</description>
+        <name>fpt_currenciesUtils</name>
+        <script><![CDATA[var fpt_currenciesUtils = Class.create();
+fpt_currenciesUtils.prototype = Object.extendsObject(global.AbstractAjaxProcessor, {
+    setLastRateUpdate: function(exchangeRateGR) {
+        var currencyRecord = new GlideRecord('x_847732_currency_currency');
+        if (currencyRecord.get(exchangeRateGR.getValue('currency'))) {
+            currencyRecord.setValue('last_rate_update', exchangeRateGR.getValue('sys_updated_on'));
+        }
+        currencyRecord.update('Update last rate update');
+        gs.info('LAST RATE UPDATE: ' + currencyRecord.getValue('last_rate_update'));
+    },
+
+    setLowestRate: function(exchangeRateGR) {
+        var currencyRecord = new GlideRecord('x_847732_currency_currency');
+        if (currencyRecord.get(exchangeRateGR.getValue('currency'))) {
+            var currentLowestRate = currencyRecord.getValue('lowest_rate');
+            if (currentLowestRate != null && exchangeRateGR.getValue('rate') >= currentLowestRate) {
+                gs.info('LOWEST RATE: RETURN' + currentLowestRate);
+                return;
+            } else {
+                currencyRecord.setValue('lowest_rate', exchangeRateGR.getValue('rate'));
+                currencyRecord.update('Update lowest rate');
+            }
+        }
+        gs.info('LOWEST RATE: ' + currencyRecord.getValue('lowest_rate'));
+    },
+
+    setHighestRate: function(exchangeRateGR) {
+        var currencyRecord = new GlideRecord('x_847732_currency_currency');
+        if (currencyRecord.get(exchangeRateGR.getValue('currency'))) {
+            var currentHighestRate = currencyRecord.getValue('highest_rate');
+            if (currentHighestRate != null && exchangeRateGR.getValue('rate') <= currentHighestRate) {
+                gs.info('HIGHEST RATE: RETURN' + currentHighestRate);
+                return;
+            } else {
+                currencyRecord.setValue('highest_rate', exchangeRateGR.getValue('rate'));
+                currencyRecord.update('Update highest rate');
+            }
+        }
+        gs.info('HIGHEST RATE: ' + currencyRecord.getValue('highest_rate'));
+    },
+
+    _getLowestHighestRate: function(currencyId, highest) {},
+
+    disableOldRates: function(exchangeRateGR) {
+        var exchangeRateRecord = new GlideRecord('x_847732_currency_exchange_rate');
+        exchangeRateRecord.query();
+        while (exchangeRateRecord.next()) {
+            if (exchangeRateRecord.getValue('sys_id') != exchangeRateGR.getValue('sys_id')) {
+                exchangeRateRecord.setValue('active', false);
+                exchangeRateRecord.setWorkflow(false);
+                exchangeRateRecord.update();
+            } else {
+                exchangeRateRecord.setValue('active', true);
+                exchangeRateRecord.setWorkflow(false);
+                exchangeRateRecord.update();
+            }
+        }
+    },
+
+    type: 'fpt_currenciesUtils'
+});]]></script>
+        <sys_class_name>sys_script_include</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2022-07-22 02:35:42</sys_created_on>
+        <sys_id>f578bc1a07b8111068edf16c7c1ed0e6</sys_id>
+        <sys_mod_count>30</sys_mod_count>
+        <sys_name>fpt_currenciesUtils</sys_name>
+        <sys_package display_value="Currency" source="x_847732_currency">494a0e020730111068edf16c7c1ed0f8</sys_package>
+        <sys_policy>read</sys_policy>
+        <sys_scope display_value="Currency">494a0e020730111068edf16c7c1ed0f8</sys_scope>
+        <sys_update_name>sys_script_include_f578bc1a07b8111068edf16c7c1ed0e6</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2022-07-22 06:07:51</sys_updated_on>
+    </sys_script_include>
+</record_update>
