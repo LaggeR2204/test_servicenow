@@ -6,7 +6,7 @@
         <sys_class_name>sys_data_policy_rule</sys_class_name>
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2022-07-22 01:38:19</sys_created_on>
-        <sys_data_policy display_value="fpt_permanentMandatory">251bacda0778111068edf16c7c1ed0d8</sys_data_policy>
+        <sys_data_policy display_value="fpt_currencyMandatory">251bacda0778111068edf16c7c1ed0d8</sys_data_policy>
         <sys_id>2e9be01e0778111068edf16c7c1ed01e</sys_id>
         <sys_mod_count>0</sys_mod_count>
         <sys_name>country</sys_name>

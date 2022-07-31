@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?><database>
+    <element label="Exchange rate" max_length="40" name="x_847732_currency_exchange_rate" sizeclass="5" type="collection">
+        <element default="true" label="Active" max_length="40" name="active" type="boolean"/>
+        <element label="Currency" max_length="32" name="currency" reference="x_847732_currency_currency" type="reference"/>
+        <element label="Rate" max_length="20" name="rate" type="decimal"/>
+        <index name="index">
+            <element name="currency"/>
+        </index>
+    </element>
+</database>

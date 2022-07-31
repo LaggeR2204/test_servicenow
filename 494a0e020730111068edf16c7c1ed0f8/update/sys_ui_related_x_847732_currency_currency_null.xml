@@ -2,17 +2,17 @@
     <sys_ui_related sys_domain="global" table="x_847732_currency_currency" version="2" view="">
         <sys_ui_related_list_entry action="INSERT_OR_UPDATE">
             <filter/>
-            <list_id display_value="Currency - Default view" name="x_847732_currency_currency" related_list="NULL" sys_domain="global" view="Default view">7537a01a0778111068edf16c7c1ed090</list_id>
+            <list_id display_value="Currency - Default view" name="x_847732_currency_currency" related_list="NULL" sys_domain="global" view="Default view">b1d3381607b8111068edf16c7c1ed0c1</list_id>
             <order_by/>
             <position>0</position>
             <related_list>x_847732_currency_exchange_rate.currency</related_list>
             <sys_class_name>sys_ui_related_list_entry</sys_class_name>
             <sys_created_by>admin</sys_created_by>
-            <sys_created_on>2022-07-22 01:18:58</sys_created_on>
-            <sys_id>3137a01a0778111068edf16c7c1ed091</sys_id>
+            <sys_created_on>2022-07-22 02:14:09</sys_created_on>
+            <sys_id>79d3381607b8111068edf16c7c1ed0c2</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_updated_by>admin</sys_updated_by>
-            <sys_updated_on>2022-07-22 01:18:58</sys_updated_on>
+            <sys_updated_on>2022-07-22 02:14:09</sys_updated_on>
         </sys_ui_related_list_entry>
         <sys_ui_related_list action="INSERT_OR_UPDATE">
             <calculated_name>Currency - Default view</calculated_name>
@@ -23,10 +23,10 @@
             <related_list/>
             <sys_class_name>sys_ui_related_list</sys_class_name>
             <sys_created_by>admin</sys_created_by>
-            <sys_created_on>2022-07-22 01:18:58</sys_created_on>
+            <sys_created_on>2022-07-22 02:14:09</sys_created_on>
             <sys_domain>global</sys_domain>
             <sys_domain_path>/</sys_domain_path>
-            <sys_id>7537a01a0778111068edf16c7c1ed090</sys_id>
+            <sys_id>b1d3381607b8111068edf16c7c1ed0c1</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_name>Currency - Default view</sys_name>
             <sys_package display_value="Currency" source="x_847732_currency">494a0e020730111068edf16c7c1ed0f8</sys_package>
@@ -34,7 +34,7 @@
             <sys_scope display_value="Currency">494a0e020730111068edf16c7c1ed0f8</sys_scope>
             <sys_update_name>sys_ui_related_x_847732_currency_currency_null</sys_update_name>
             <sys_updated_by>admin</sys_updated_by>
-            <sys_updated_on>2022-07-22 01:18:58</sys_updated_on>
+            <sys_updated_on>2022-07-22 02:14:09</sys_updated_on>
             <sys_user/>
             <view display_value="Default view" name="NULL">Default view</view>
             <view_name/>

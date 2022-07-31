@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?><database>
+    <element label="Currency" max_length="40" name="x_847732_currency_currency" sizeclass="1" type="collection">
+        <element display="true" label="Code" max_length="10" name="code" type="string"/>
+        <element label="Country" max_length="200" name="country" type="string"/>
+        <element label="Editors" max_length="4000" name="editors" reference="sys_user" type="glide_list"/>
+        <element label="Highest rate" max_length="20" name="highest_rate" type="decimal"/>
+        <element label="Last rate update" max_length="40" name="last_rate_update" type="glide_date_time"/>
+        <element label="Lowest rate" max_length="20" name="lowest_rate" type="decimal"/>
+        <element label="Name" max_length="100" name="name" type="string"/>
+    </element>
+</database>
